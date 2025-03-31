@@ -42,17 +42,17 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="form-container flex flex-wrap p-2 lg:p-10" onSubmit={submitForm}>
+    <form className="form-container flex flex-wrap p-2 lg:px-4 lg:py-12" onSubmit={submitForm}>
       <div className="input-group flex flex-wrap w-full">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl lg:py-2">Name</label>
+        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">Name</label>
         <input className="w-full background-blue lg:border-b-2" type="text" ref={name} disabled={isSent} />
       </div>
       <div className="input-group flex flex-wrap w-full lg:mt-12">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl lg:py-2">Email</label>
+        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">Email</label>
         <input className="w-full background-blue lg:border-b-2" type="email" ref={email} disabled={isSent} />
       </div>
       <div className="input-group flex flex-wrap w-full lg:mt-12">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl lg:py-2">Message</label>
+        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">Message</label>
         <textarea className="w-full background-blue lg:border-b-2" ref={msg} disabled={isSent} />
       </div>
       <div className="flex items-center gap-2 mt-5">

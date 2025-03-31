@@ -37,7 +37,7 @@ function AnimatedDiv({ children, className }: AnimatedDivProps) {
 export default function DataType() {
   return (
     <div className="h-auto flex background-blue justify-center items-center text-white pt-24 pb-16 lg:py-0 md:h-auto lg:h-screen">
-      <AnimatedDiv className="w-full h-[70vh] lg:h-[80vh] flex flex-wrap justify-center background-data">
+      <AnimatedDiv className="w-full h-[70vh] md:h-[80vh] flex flex-wrap justify-center background-data">
         <div className="w-full text-center text-4xl lg:text-7xl helvetica font-bold mb-12 md:mb-24 lg:mb-32">
           <span className="maven-pro">Data</span>
           <span className="text-4xl lg:text-7xl text-light-blue ml-2">
@@ -54,10 +54,10 @@ export default function DataType() {
           <div className="maven-pro font-semibold text-start">AI-powered web scraping</div>
           <p className="text-start font-light text-3xl mt-8">
             Extract, analyze, and transform data into actionable insights<br/>
-            <span className="underline text-light-blue inline">
+            <span className="underline text-light-blue inline text-3xl text-left">
               <IoRocketOutline className="inline" /> faster
-              <FaRegThumbsUp className="inline" /> smarter
-              <FaRegLightbulb className="inline" /> effortlessly
+              <FaRegThumbsUp className="inline ml-4" /> smarter
+              <FaRegLightbulb className="inline ml-4" /> effortlessly
             </span>
           </p>
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="relative top-0 left-0 w-full z-50 flex justify-between items-center text-white py-6 px-8 md:px-32 background-blue-op drop-shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center text-white py-6 px-8 md:px-32 background-blue-op drop-shadow-md">
       <a href="#">
         <h3 className="w-52 text-3xl maven-pro font-bold">
-          Be<span className="text-light-blue">Awake</span>
+        <Link to="/">Be<span className="text-light-blue">Awake</span></Link>
         </h3>
       </a>
 
