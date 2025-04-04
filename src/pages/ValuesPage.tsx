@@ -1,6 +1,7 @@
 import WeBelieve from "/assets/WeBelieve2.png";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const subtleAnimation = {
   hidden: { opacity: 0, y: 30 },
@@ -33,8 +34,10 @@ function AnimatedDiv({ children, className }: AnimatedDivProps) {
 }
 
 export default function ValuesPage() {
+  const { t } = useTranslation();
+
   return (
-    <div className="background-blue text-white mt-24 md:mt-0">
+    <div id="values" className="background-blue text-white mt-24 md:mt-0">
       <div className="flex justify-center items-baseline">
         <img className="img-webelieve" src={WeBelieve} alt="We Believe" />
       </div>
@@ -45,33 +48,27 @@ export default function ValuesPage() {
       >
         <AnimatedDiv className="md:w-full flex md:mt-0 justify-center">
           <div className="p-4 mt-4 w-7/12 md:p-0 md:mt-0 border-solid border-2 md:border-4 gradient-border md:px-5 md:py-5 md:w-full flex flex-wrap">
-            <h3 className="md:text-4xl">Empathy & Human Connection</h3>
+            <h3 className="md:text-4xl">{t("values.card1.title")}</h3>
             <div className="mt-24 lg:mt-48 flex justify-center items-end">
-              <p className="md:text-2xl">
-                Empathy drives us. Behind every innovation, there are real people with unique stories and needs.
-              </p>
+              <p className="md:text-2xl">{t("values.card1.description")}</p>
             </div>
           </div>
         </AnimatedDiv>
         
         <AnimatedDiv className="md:w-full mt-8 md:mt-0 flex justify-center">
           <div className="p-4 mt-4 w-7/12 md:mt-0 border-solid border-2 md:border-4 gradient-border md:px-5 md:py-5 md:w-full flex flex-wrap">
-            <h3 className="md:text-4xl">Privacy & Trust</h3>
+            <h3 className="md:text-4xl">{t("values.card2.title")}</h3>
             <div className="mt-24 md:mt-48 flex justify-center items-end">
-              <p className="md:text-2xl">
-                We uphold the highest data privacy standards, ensuring trust at every step.
-              </p>
+              <p className="md:text-2xl">{t("values.card2.description")}</p>
             </div>
           </div>
         </AnimatedDiv>
         
         <AnimatedDiv className="md:w-full mt-8 md:mt-0 flex justify-center">
           <div className="p-4 mt-4 w-7/12 md:mt-0 border-solid border-2 md:border-4 gradient-border md:px-5 md:py-5 md:w-full flex flex-wrap">
-            <h3 className="md:text-4xl">Ethical AI with Real Impact</h3>
+            <h3 className="md:text-4xl">{t("values.card3.title")}</h3>
             <div className="mt-24 md:mt-48 flex justify-center items-end">
-              <p className="md:text-2xl">
-                Our AI solutions are ethical, impactful, and designed to create real-world value.
-              </p>
+              <p className="md:text-2xl">{t("values.card3.description")}</p>
             </div>
           </div>
         </AnimatedDiv>

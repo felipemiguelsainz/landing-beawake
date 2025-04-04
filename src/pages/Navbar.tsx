@@ -1,18 +1,29 @@
+// pages/Navbar.tsx
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleScroll = (id: string) => {
+  const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       const yOffset = id === "values" ? -100 : -50;
       const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
+  };
+
+  const handleScroll = (id: string) => {
     setIsMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      scrollToSection(id);
+    }
   };
 
   useEffect(() => {
@@ -21,7 +32,6 @@ export default function Navbar() {
         setIsMenuOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -37,8 +47,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center text-white py-6 px-8 md:px-32 background-blue-op drop-shadow-md">
       <a href="#">
-        <h3 className="w-52 text-3xl maven-pro font-bold">
-        <Link to="/">Be<span className="text-light-blue">Awake</span></Link>
+        <h3 className="w-52 text-3xl maven-pro font-bold cursor-pointer" onClick={() => handleScroll("home")}>
+          Be<span className="text-light-blue">Awake</span>
         </h3>
       </a>
 
@@ -66,7 +76,7 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute xl:hidden top-16 left-0 w-full bg-[#0c0a25] flex flex-col items-center gap-6 font-semibold text-lg z-50">
+        <ul className="absolute xl:hidden top-16 left-0 w-full bg-[#0c0a25] flex flex-col items-center gap-6 font-semibold text-lg z-50">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -76,7 +86,7 @@ export default function Navbar() {
               {item.label}
             </li>
           ))}
-        </div>
+        </ul>
       )}
     </nav>
   );

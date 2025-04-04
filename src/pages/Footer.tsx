@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Importa Link de react-router-dom
 
 export default function Footer() {
   return (
-    <div className="bg-[#0c0a25] flex w-full flex-wrap md:flex-nowrap justify-center text-center md:justify-around text-white pb-4 maven-pro">
+    <div className="bg-[#0c0a25] flex w-full flex-wrap md:flex-nowrap justify-center text-left md:justify-around text-white pb-4 maven-pro">
       <p>
         <a className="underline" href="mailto:sales@beawake.ai">sales@beawake.ai</a>
       </p>

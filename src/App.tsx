@@ -1,4 +1,6 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+// App.tsx
+import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./index.css";
 import HomePage from "./pages/HomePage";
 import Navbar from "./pages/Navbar";
@@ -8,17 +10,35 @@ import ContactUs from "./pages/ContactUs";
 import DataType from "./pages/DataType";
 import Footer from "./pages/Footer";
 import TermsPage from "./pages/TermsPage";
+import "./i18n";
+
+
+function ScrollToSectionOnLoad() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const id = location.state.scrollTo;
+      const section = document.getElementById(id);
+      if (section) {
+        const yOffset = id === "values" ? -100 : -50;
+        const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  return null;
+}
 
 function App() {
   return (
     <Router>
       <div className="background-blue">
-        {/* Siempre renderiza el Navbar */}
         <Navbar />
-
+        <ScrollToSectionOnLoad />
         <main>
           <Routes>
-            {/* Ruta principal: renderiza todas las secciones de una sola vez */}
             <Route 
               path="/" 
               element={
@@ -31,13 +51,9 @@ function App() {
                 </>
               }
             />
-            
-            {/* Ruta para Terms: muestra solo la página de términos */}
             <Route path="/terms" element={<TermsPage />} />
           </Routes>
         </main>
-
-        {/* Footer se mantiene siempre visible */}
         <Footer />
       </div>
     </Router>

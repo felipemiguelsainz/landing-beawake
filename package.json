@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",
@@ -22,8 +22,11 @@
     "embla-carousel-react": "^8.5.2",
     "flowbite-react": "^0.10.2",
     "framer-motion": "^12.4.10",
+    "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.4.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.5",
     "react-scroll": "^1.9.0",

@@ -1,0 +1,86 @@
+{
+    "navbar": {
+      "about": "SOBRE NOSOTROS",
+      "values": "VALORES",
+      "model": "NUESTRO MODELO",
+      "products": "PRODUCTO",
+      "contact": "CONTACTO"
+    },
+    "home": {
+      "headline": "Aprovechando la IA para crear soluciones revolucionarias para un futuro más inteligente",
+      "contact": "CONTÁCTANOS"
+    },
+    "values": {
+      "card1": {
+        "title": "Empatía y Conexión Humana",
+        "description": "La empatía nos impulsa. Detrás de cada innovación hay personas reales con historias y necesidades únicas."
+      },
+      "card2": {
+        "title": "Privacidad y Confianza",
+        "description": "Mantenemos los más altos estándares de privacidad de datos, garantizando la confianza en cada paso."
+      },
+      "card3": {
+        "title": "IA Ética con Impacto Real",
+        "description": "Nuestras soluciones de IA son éticas, con impacto, y están diseñadas para crear valor en el mundo real."
+      }
+    },
+    "model": {
+      "titleStatic": "Datos",
+      "typing": ["Captura", "Procesamiento", "Modelado", "Distribución"],
+      "subtitle": "Extracción inteligente de datos",
+      "description": "Extraé, analizá y transformá datos en información procesable",
+      "speed": {
+        "fast": "más rápido",
+        "smart": "más inteligente",
+        "easy": "sin esfuerzo"
+      }
+    },
+    "products": {
+      "titlePart1": "Nuestros",
+      "titlePart2": "Productos",
+      "list": [
+        {
+          "title": "Monitoreo Reactivo",
+          "description": "Rastrea y analiza contenido digital de fuentes diversas",
+          "bgColor": "bg-[#0c0a25]"
+        },
+        {
+          "title": "Monitoreo Activo",
+          "description": "Supervisá perfiles clave en Twitter y TikTok en tiempo real con alertas instantáneas",
+          "bgColor": "bg-[#1e6985]"
+        },
+        {
+          "title": "Clipping IA On & Off",
+          "description": "Capturá y procesá datos de medios online y offline en todo el mundo",
+          "bgColor": "bg-[#0c0a25]"
+        },
+        {
+          "title": "AllInsights & Estrategias",
+          "description": "Aprovechá grandes volúmenes de datos para generar insights y estrategias de comunicación",
+          "bgColor": "bg-[#1e6985]"
+        }
+      ]
+    },
+    "contact": {
+      "title": {
+        "part1": "contacto",
+        "part2": "Nosotros"
+      },
+      "form": {
+        "name": "Nombre",
+        "email": "Correo",
+        "message": "Mensaje",
+        "submit": "Hablemos",
+        "sending": "Enviando...",
+        "sent": "Enviado"
+      }
+    },
+    "terms": {
+    "title": "Términos y Condiciones",
+    "summary": "Al usar este sitio web, aceptás los términos y condiciones establecidos por BeAwake, incluyendo políticas de privacidad, condiciones de acceso y uso de cookies. Hacé clic abajo para leer los términos completos.",
+    "read": "Leer Términos Completos",
+    "hide": "Ocultar Términos",
+    "full": "ANTECEDENTES Y TÉRMINOS Y CONDICIONES — BeAwake. Esta política de uso entra en vigencia desde abril de 2024. BeAwake, una entidad legal privada, establece mediante este documento las normas de uso del sitio web http://beawake.ai y de cualquier otro sitio, tienda o aplicación operada por el titular. Al navegar en este sitio web, consideramos que aceptás los términos de uso descritos a continuación. Si no estás de acuerdo con los términos de este acuerdo, te solicitamos que no continúes utilizando este sitio, ni te registres ni proporciones tus datos personales. En caso de que modifiquemos nuestros términos de uso, publicaremos el nuevo texto en este sitio web, con la fecha de revisión actualizada. Podemos modificar este documento en cualquier momento. Si hay un cambio significativo en los términos, es posible que te notifiquemos utilizando los datos de contacto que tengamos en nuestra base de datos o a través de una notificación en el sitio. El uso continuo de este sitio web después de los cambios significa que aceptás los nuevos términos. Si luego de leer la versión actualizada no estás de acuerdo, por favor suspendé tu acceso. Sección 1 - Usuario. El uso de este sitio web te otorga automáticamente la condición de Usuario e implica tu aceptación total de todas las directrices y condiciones incluidas en estos Términos. Sección 2 - Adhesión junto con la Política de Privacidad. El uso de este sitio implica la adhesión a estos Términos de Uso y a la versión más actualizada de la Política de Privacidad de BeAwake. Sección 3 - Condiciones de acceso. En general, el acceso al sitio de BeAwake es libre y no requiere registro previo. No obstante, para utilizar algunas funciones, el usuario deberá registrarse, creando una cuenta con nombre de usuario y contraseña. Es responsabilidad del usuario proporcionar información correcta, válida, auténtica y actualizada, así como no divulgar su contraseña a terceros. Algunas áreas del sitio permiten a los usuarios publicar comentarios. BeAwake no permite la publicación de contenido discriminatorio, ofensivo, ilegal o que infrinja derechos de autor u otros derechos de terceros. Cualquier contenido publicado por el usuario implica una licencia irrevocable y sin exclusividad para su uso, reproducción y publicación por parte de BeAwake en sus plataformas digitales, sin limitación alguna. Sección 4 - Cookies. La información sobre tu uso del sitio puede ser recolectada mediante cookies. Las cookies son fragmentos de información almacenados en el dispositivo que estás utilizando. Permiten recopilar información como tipo de navegador, tiempo de permanencia, páginas visitadas, preferencias de idioma, y otros datos anónimos. Nosotros y nuestros proveedores utilizamos esta información para protección de seguridad, personalizar tu experiencia y mejorar el diseño del sitio. Si no querés permitir el uso de cookies, podés desactivarlas en la configuración de tu navegador, aunque esto podría afectar tu experiencia. No nos hacemos responsables por los efectos derivados del mal funcionamiento del sitio si desactivás las cookies. Sección 5 - Propiedad intelectual. Todos los elementos del sitio de BeAwake son propiedad intelectual de BeAwake o de sus licenciantes. Estos Términos no te otorgan ninguna licencia o derecho de uso sobre dicha propiedad. Sección 6 - Enlaces a sitios de terceros. Este sitio puede contener enlaces a sitios externos de socios, proveedores o redes sociales. Cada uno de esos sitios tiene sus propias políticas de privacidad, por lo que recomendamos revisarlas antes de proporcionar datos personales. No somos responsables por la recolección, uso o difusión de datos por parte de terceros, como Facebook, Google, Apple, Microsoft, entre otros. Sección 7 - Plazos y modificaciones. El funcionamiento de este sitio es por tiempo indefinido, pero BeAwake se reserva el derecho de cerrar, suspender o interrumpir su funcionamiento total o parcial sin previo aviso. Sección 8 - Datos personales. Durante el uso del sitio, BeAwake y/o sus socios podrán recolectar y tratar datos personales. Las reglas aplicables a ese tratamiento están estipuladas en la Política de Privacidad. Sección 9 - Contacto. Si tenés dudas sobre estos términos de uso, podés escribirnos al correo electrónico hi@beawake.ai."
+    }
+  }
+  
