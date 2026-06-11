@@ -61,7 +61,7 @@ export default function DataType() {
           <div className="maven-pro font-semibold text-start">
             {t("model.subtitle")}
           </div>
-          <p className="text-start font-light text-3xl mt-8">
+          <div className="text-start font-light text-3xl mt-8">
             {t("model.description")}
             <br />
             <div className="flex flex-col text-light-blue text-2xl text-left underline gap-2 mt-4">
@@ -78,7 +78,7 @@ export default function DataType() {
                 <span>{t("model.speed.easy")}</span>
               </div>
             </div>
-          </p>
+          </div>
         </div>
       </AnimatedDiv>
     </div>

@@ -39,7 +39,7 @@ export default function ValuesPage() {
   return (
     <div id="values" className="background-blue text-white mt-24 md:mt-0">
       <div className="flex justify-center items-baseline">
-        <img className="img-webelieve" src={WeBelieve} alt="We Believe" />
+        <img className="img-webelieve" src={WeBelieve} alt="We Believe" loading="lazy" decoding="async" />
       </div>
       
       <motion.div 

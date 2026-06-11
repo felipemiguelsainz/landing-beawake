@@ -10,6 +10,7 @@ import ContactUs from "./pages/ContactUs";
 import DataType from "./pages/DataType";
 import Footer from "./pages/Footer";
 import TermsPage from "./pages/TermsPage";
+import { useTranslation } from "react-i18next";
 import "./i18n";
 
 
@@ -32,6 +33,12 @@ function ScrollToSectionOnLoad() {
 }
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <Router>
       <div className="background-blue">

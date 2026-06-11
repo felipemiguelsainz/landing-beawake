@@ -20,10 +20,11 @@ export default function HomePage() {
               {t("home.headline")}
             </span>
             <button
+              type="button"
               className="text-white light-blue maven-pro font-bold p-4 text-sm md:text-base rounded-3xl mt-5 flex items-center cursor-pointer"
               onClick={handleScroll}
             >
-              <FaArrowDown className="mr-3" />
+              <FaArrowDown className="mr-3" aria-hidden="true" />
               {t("home.contact")}
             </button>
           </div>

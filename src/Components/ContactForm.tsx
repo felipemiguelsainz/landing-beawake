@@ -43,37 +43,48 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="form-container flex flex-wrap p-2 lg:px-4 lg:py-12" onSubmit={submitForm}>
+    <form className="form-container flex flex-wrap p-2 lg:px-4 lg:py-12" onSubmit={submitForm} noValidate>
       <div className="input-group flex flex-wrap w-full">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">
+        <label htmlFor="contact-name" className="w-full maven-pro font-semibold text-xl lg:text-4xl">
           {t("contact.form.name")}
         </label>
         <input
+          id="contact-name"
+          name="name"
+          autoComplete="name"
           className="w-full background-blue lg:border-b-2"
           type="text"
           ref={name}
           disabled={isSent}
+          required
         />
       </div>
       <div className="input-group flex flex-wrap w-full lg:mt-12">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">
+        <label htmlFor="contact-email" className="w-full maven-pro font-semibold text-xl lg:text-4xl">
           {t("contact.form.email")}
         </label>
         <input
+          id="contact-email"
+          name="email"
+          autoComplete="email"
           className="w-full background-blue lg:border-b-2"
           type="email"
           ref={email}
           disabled={isSent}
+          required
         />
       </div>
       <div className="input-group flex flex-wrap w-full lg:mt-12">
-        <label className="w-full maven-pro font-semibold text-xl lg:text-4xl">
+        <label htmlFor="contact-message" className="w-full maven-pro font-semibold text-xl lg:text-4xl">
           {t("contact.form.message")}
         </label>
         <textarea
+          id="contact-message"
+          name="message"
           className="w-full background-blue lg:border-b-2"
           ref={msg}
           disabled={isSent}
+          required
         />
       </div>
       <div className="flex items-center gap-2 mt-5">

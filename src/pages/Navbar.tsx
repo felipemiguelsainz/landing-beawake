@@ -46,18 +46,36 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center text-white py-6 px-8 md:px-32 background-blue-op drop-shadow-md">
-      <a href="#">
-        <h3 className="w-52 text-3xl maven-pro font-bold cursor-pointer" onClick={() => handleScroll("home")}>
-          Be<span className="text-light-blue">Awake</span>
-        </h3>
-      </a>
+      <h3
+        className="w-52 text-3xl maven-pro font-bold cursor-pointer"
+        role="button"
+        tabIndex={0}
+        aria-label="Be Awake - go to top"
+        onClick={() => handleScroll("home")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleScroll("home");
+          }
+        }}
+      >
+        Be<span className="text-light-blue">Awake</span>
+      </h3>
 
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
         {menuItems.map((item) => (
           <li
             key={item.id}
             className="cursor-pointer border-b-2 border-transparent hover:border-white transition-colors duration-300 nav-item"
+            role="button"
+            tabIndex={0}
             onClick={() => handleScroll(item.id)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleScroll(item.id);
+              }
+            }}
           >
             {item.label}
           </li>
@@ -65,14 +83,19 @@ export default function Navbar() {
       </ul>
 
       <div className="xl:hidden">
-        <RxHamburgerMenu
+        <button
+          type="button"
           className="block text-2xl cursor-pointer"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
             setIsMenuOpen((prev) => !prev);
           }}
-        />
+        >
+          <RxHamburgerMenu aria-hidden="true" />
+        </button>
       </div>
 
       {isMenuOpen && (
@@ -81,7 +104,15 @@ export default function Navbar() {
             <li
               key={item.id}
               className="w-full text-center p-4 cursor-pointer border-b-2 border-transparent hover:border-white transition-colors duration-300"
+              role="button"
+              tabIndex={0}
               onClick={() => handleScroll(item.id)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleScroll(item.id);
+                }
+              }}
             >
               {item.label}
             </li>
